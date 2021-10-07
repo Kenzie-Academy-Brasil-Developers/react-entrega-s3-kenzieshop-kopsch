@@ -1,12 +1,19 @@
 import { ImageCard, DivHover, SpanTitle, SpanPrice } from "./styles";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addCartThunk } from "../../store/modules/cart/thunks";
 
-const ProductList = ({ props }) => {
-  const { name, price, image } = props;
+const ProductList = ({ item }) => {
+  const { name, price, image } = item;
   const [isVisible, setIsVisible] = useState(false);
+  const dispatch = useDispatch();
 
   const toVisible = () => setIsVisible(true);
   const toHidden = () => setIsVisible(false);
+
+  const handleCart = () => {
+    dispatch(addCartThunk(item));
+  };
 
   return (
     <>
@@ -27,7 +34,7 @@ const ProductList = ({ props }) => {
         isVisible={isVisible}
         onMouseMove={toVisible}
         onMouseLeave={toHidden}
-        onClick={() => window.alert("yey")}
+        onClick={handleCart}
       >
         ADD TO CART
       </DivHover>
