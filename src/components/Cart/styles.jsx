@@ -1,18 +1,34 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
-export const ContainerCart = styled.div`
+const brightness = keyframes` 
+0%{filter: invert(0)}
+50%{filter: invert(1)}
+100%{filter: invert(0)}
+`;
+
+export const ContainerCart = styled(motion.div)`
   position: fixed;
   top: 0;
   height: 100vh;
   width: 100%;
   z-index: 30;
   display: flex;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 export const Background = styled.div`
   width: 75%;
   height: 100%;
   background: #000000ce;
+  @media (max-width: 1400px) {
+    width: 60%;
+  }
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const CartContainer = styled.div`
@@ -21,6 +37,15 @@ export const CartContainer = styled.div`
   background: #fff;
   display: flex;
   flex-flow: column nowrap;
+  @media (max-width: 1400px) {
+    width: 40%;
+  }
+  @media (max-width: 900px) {
+    width: 70%;
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 export const TitleCart = styled.div`
@@ -58,7 +83,7 @@ export const CartProduct = styled.div`
   align-items: center;
 
   img {
-    width: 17%;
+    width: 60px;
   }
 
   span:nth-of-type(1) {
@@ -76,6 +101,9 @@ export const CartProduct = styled.div`
     font-weight: bold;
     cursor: pointer;
   }
+  @media (max-width: 375px) {
+    width: 95%;
+  }
 `;
 
 export const TotalValue = styled.div`
@@ -84,4 +112,13 @@ export const TotalValue = styled.div`
   background: #ececec;
   align-self: flex-end;
   margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+`;
+
+export const ValueInDollar = styled.span`
+  font-weight: bold;
+  animation: ${brightness} 1s linear infinite;
 `;

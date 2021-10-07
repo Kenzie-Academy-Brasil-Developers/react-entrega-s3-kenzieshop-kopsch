@@ -6,6 +6,9 @@ export const TopContainer = styled.div`
   background: #f7f7f7;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 export const TopLinks = styled.div`
@@ -21,6 +24,15 @@ export const TopLinks = styled.div`
   &:hover {
     border-bottom: 2px solid #000000;
     color: #000000;
+  }
+
+  @media (max-width: 900px) {
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
   }
 `;
 
@@ -38,4 +50,7 @@ export const CartItems = styled.span`
   border-radius: 100%;
   top: 5px;
   right: 50px;
+  @media (max-width: 900px) {
+    right: 10px;
+  }
 `;

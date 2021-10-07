@@ -7,6 +7,9 @@ export const BottomContainer = styled.div`
   border-bottom: 1px solid #c4c4c4;
   display: flex;
   flex-flow: row;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 export const BottomLink = styled.div`
@@ -19,6 +22,9 @@ export const BottomLink = styled.div`
   &:hover {
     border-bottom: 2px solid #000;
   }
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const DivLeft = styled.div`
@@ -26,6 +32,9 @@ export const DivLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `;
 
 export const DivCenter = styled.div`
@@ -34,6 +43,9 @@ export const DivCenter = styled.div`
   justify-content: center;
   align-items: center;
   width: 33%;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const DivRight = styled.div`
@@ -41,6 +53,9 @@ export const DivRight = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const InputStyled = styled.input`
@@ -60,6 +75,9 @@ export const DivSearch = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const ImageSearch = styled.img`
@@ -67,7 +85,7 @@ export const ImageSearch = styled.img`
 `;
 
 export const ImageLogo = styled.img`
-  width: 130px;
+  max-width: 130px;
   margin-left: 20px;
   cursor: pointer;
 `;

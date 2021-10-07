@@ -31,3 +31,13 @@ export const SpanPrice = styled.span`
   font-size: 10pt;
   margin-bottom: 8px;
 `;
+
+export const Button = styled.button`
+  display: none;
+  border: 1px solid #000;
+  outline: none;
+  cursor: pointer;
+  @media (max-width: 900px) {
+    display: block;
+  }
+`;

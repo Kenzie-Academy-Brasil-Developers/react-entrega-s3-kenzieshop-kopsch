@@ -1,4 +1,4 @@
-import { ImageCard, DivHover, SpanTitle, SpanPrice } from "./styles";
+import { ImageCard, DivHover, SpanTitle, SpanPrice, Button } from "./styles";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCartThunk } from "../../store/modules/cart/thunks";
@@ -38,6 +38,7 @@ const ProductList = ({ item }) => {
       >
         ADD TO CART
       </DivHover>
+      <Button onClick={handleCart}>ADD TO CART</Button>
     </>
   );
 };

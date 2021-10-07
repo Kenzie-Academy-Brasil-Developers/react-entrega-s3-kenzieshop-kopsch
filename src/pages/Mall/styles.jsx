@@ -10,6 +10,10 @@ export const DivProduct = styled.div`
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 900px) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 export const DivAside = styled.div`
@@ -19,6 +23,9 @@ export const DivAside = styled.div`
   padding: 20px;
   display: flex;
   flex-flow: column nowrap;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const CardProduct = styled.div`
@@ -32,6 +39,9 @@ export const CardProduct = styled.div`
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  @media (max-width: 900px) {
+    height: 400px;
+  }
 `;
 
 export const FilterDesc = styled.h2`
