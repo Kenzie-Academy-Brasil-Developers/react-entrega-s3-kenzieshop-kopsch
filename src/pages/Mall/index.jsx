@@ -8,11 +8,10 @@ import {
   DivAside,
   FilterDesc,
 } from "./styles";
-import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const Mall = () => {
-  const { products } = useSelector((state) => state);
+  const { products, isVisible } = useSelector((state) => state);
   const categories = [
     "MODELO",
     "ANO",
@@ -22,11 +21,10 @@ const Mall = () => {
     "GÊNERO",
     "OFERTAS",
   ];
-  const [visible, setVisible] = useState(true);
 
   return (
     <DivMall>
-      {visible && <Cart />}
+      {isVisible && <Cart />}
       <DivAside>
         <FilterDesc>FILTROS</FilterDesc>
         {categories.map((category, index) => (

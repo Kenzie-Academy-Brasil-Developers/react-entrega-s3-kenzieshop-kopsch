@@ -53,7 +53,7 @@ export const CartProduct = styled.div`
   width: 85%;
   height: 60px;
   background: #ececec;
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   align-items: center;
 
@@ -72,8 +72,16 @@ export const CartProduct = styled.div`
   }
   span:last-of-type {
     font-size: 12pt;
-    margin-left: 35px;
+    margin-left: 50px;
     font-weight: bold;
     cursor: pointer;
   }
+`;
+
+export const TotalValue = styled.div`
+  width: 50%;
+  height: 35px;
+  background: #ececec;
+  align-self: flex-end;
+  margin-right: 5px;
 `;
